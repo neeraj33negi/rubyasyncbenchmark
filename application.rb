@@ -51,6 +51,6 @@ class Application
   end
 end
 
-Application.new.benchmark(100000)
+Application.new.benchmark(ARGV[0].to_i)
 # Application.new.run_abmrk
 # Application.new.run_crbmrk

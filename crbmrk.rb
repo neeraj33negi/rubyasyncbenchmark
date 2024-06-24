@@ -5,7 +5,8 @@ class Crbmrk < Bmrk
   include Concurrent::Async
 
   def start_performing(count)
-    using_promises(count)
+    # using_promises(count)
+    using_futues(count)
   end
 
   ## figure out way to wait for all tasks without blocking the main thread
@@ -21,5 +22,12 @@ class Crbmrk < Bmrk
       requests << Concurrent::Promise.execute { task }
     end
     Concurrent::Promise.all?(requests).execute.wait
+  end
+
+  private def using_futues(count)
+    futures = count.times do
+      Concurrent::Future.execute { task }
+    end
+    Concurrent::Promise.all?(futures).execute.wait
   end
 end
