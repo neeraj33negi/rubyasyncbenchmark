@@ -1,0 +1,34 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    async (2.12.1)
+      console (~> 1.25, >= 1.25.2)
+      fiber-annotation
+      io-event (~> 1.6, >= 1.6.5)
+    benchmark (0.3.0)
+    benchmark-memory (0.2.0)
+      memory_profiler (~> 1)
+    concurrent-ruby (1.3.3)
+    console (1.25.2)
+      fiber-annotation
+      fiber-local (~> 1.1)
+      json
+    fiber-annotation (0.2.0)
+    fiber-local (1.1.0)
+      fiber-storage
+    fiber-storage (0.1.2)
+    io-event (1.6.5)
+    json (2.7.2)
+    memory_profiler (1.0.2)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  async
+  benchmark
+  benchmark-memory
+  concurrent-ruby
+
+BUNDLED WITH
+   2.4.13
